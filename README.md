@@ -27,3 +27,19 @@ npm install
 # Set up configuration
 cp .env.example .env
 
+
+### **How to Get Your Obito Token**
+1. **Browser Method**:
+   - Log in to Obito's website
+   - Open Developer Tools (F12) → Application tab
+   - Look under:
+     - `Cookies` → `auth_token` **OR**
+     - `Local Storage` → `accessToken`
+
+2. **Mobile App Method**:
+   - Use a packet sniffer (like Charles Proxy)
+   - Capture API requests to `api.hi-pin.com`
+   - Find the `Authorization: Bearer` header
+
+3. **API Response**:
+   - After login, check responses for `access_token`
